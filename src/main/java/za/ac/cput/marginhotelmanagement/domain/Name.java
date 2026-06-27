@@ -1,4 +1,9 @@
 package za.ac.cput.marginhotelmanagement.domain;
+/*
+   Name.java
+   Name POJO class
+   Author: Hlomla Magopeni (218070349)
+   Date: 21 June 2026 */
 
 public class Name implements ValueObject {
     private String firstName;
@@ -59,7 +64,7 @@ public class Name implements ValueObject {
             return this;
         }
 
-        public Name Builder(){
+        public Name build(){
             return new Name(this);
         }
 
