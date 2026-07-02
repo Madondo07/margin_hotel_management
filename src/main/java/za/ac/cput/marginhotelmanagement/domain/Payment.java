@@ -4,15 +4,22 @@ package za.ac.cput.marginhotelmanagement.domain;
    Date: 20 June 2026
    */
 
+import jakarta.persistence.*;
 import za.ac.cput.marginhotelmanagement.enums.PaymentStatus;
 
 import java.time.LocalDateTime;
 
+@Entity
 public class Payment {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long paymentId;
     private double amount;
     private PaymentStatus paymentStatus;
     private LocalDateTime paymentDate;
+
+    @ManyToOne
+    @JoinColumn(name = "invoiceId", referencedColumnName = "invoiceId")
     private Invoice invoice;
 
     public Payment() {

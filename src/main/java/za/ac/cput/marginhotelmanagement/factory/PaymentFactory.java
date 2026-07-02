@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 
 public class PaymentFactory {
     public static Payment createPayment(Long paymentId, double amount, PaymentStatus paymentStatus,
-                                        LocalDateTime paymentDate, Invoice invoice) {
+            LocalDateTime paymentDate, Invoice invoice) {
 
         if (Helper.isNullOrEmpty(paymentId) || Helper.isNullOrEmpty(paymentStatus) ||
                 Helper.isNullOrEmpty(paymentDate) || Helper.isNullOrEmpty(invoice)) {
@@ -32,6 +32,29 @@ public class PaymentFactory {
 
         return new Payment.Builder()
                 .setPaymentId(paymentId)
+                .setAmount(amount)
+                .setPaymentStatus(paymentStatus)
+                .setPaymentDate(paymentDate)
+                .setInvoice(invoice)
+                .build();
+    }
+
+    public static Payment createPayment(double amount, PaymentStatus paymentStatus,
+            LocalDateTime paymentDate, Invoice invoice) {
+
+        if (Helper.isNullOrEmpty(paymentStatus) ||
+                Helper.isNullOrEmpty(paymentDate) || Helper.isNullOrEmpty(invoice)) {
+            return null;
+        }
+
+        if (!Helper.isValidAmount(amount)) {
+            return null;
+        }
+        if (!Helper.isValidPaymentDate(paymentDate)) {
+            return null;
+        }
+
+        return new Payment.Builder()
                 .setAmount(amount)
                 .setPaymentStatus(paymentStatus)
                 .setPaymentDate(paymentDate)
