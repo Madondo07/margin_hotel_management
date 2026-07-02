@@ -4,16 +4,28 @@ package za.ac.cput.marginhotelmanagement.domain;
    Date: 20 June 2026 */
 
 
+import jakarta.persistence.*;
 import za.ac.cput.marginhotelmanagement.enums.BookingChannel;
 
 import java.time.LocalDate;
-
+@Entity
+@Table(name = "bookings")
 public class Booking {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookingId;
     private LocalDate bookingDate;
+    @Embedded
     private StayPeriod stayPeriod;
+
     private BookingChannel bookingChannel;
+
+    @ManyToOne
+    @JoinColumn(name = "guest_id")
     private Guest guest;
+
+    @ManyToOne
+    @JoinColumn(name = "room_id")
     private Room room;
 
     public Booking() {
