@@ -5,10 +5,21 @@ package za.ac.cput.marginhotelmanagement.domain;
    Author: Hlomla Magopeni (218070349)
    Date: 21 June 2026 */
 
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "guests")
 public class Guest {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long guestId;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "name_id")
     private Name name;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "contact_details_id")
     private ContactDetails contactDetails;
 
     public Guest() {}
