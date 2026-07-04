@@ -5,7 +5,13 @@ package za.ac.cput.marginhotelmanagement.domain;
    Author: Hlomla Magopeni (218070349)
    Date: 21 June 2026 */
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "names")
 public class Name implements ValueObject {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String firstName;
     private String middleName;
     private String lastName;
