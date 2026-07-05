@@ -4,12 +4,18 @@ package za.ac.cput.marginhotelmanagement.domain;
    Author: MS MALAPILE (222904267)
    Date: 20 June 2026 */
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import za.ac.cput.marginhotelmanagement.enums.InvoiceStatus;
 
 import java.time.LocalDate;
 
+@Entity
 public class Invoice {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long invoiceId;
     private String reference;
     private double totalAmount;
