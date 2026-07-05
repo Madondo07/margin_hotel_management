@@ -1,16 +1,19 @@
 package za.ac.cput.marginhotelmanagement.domain;
+
+import jakarta.persistence.Embeddable;
+
 /*
    Name.java
    Name POJO class
    Author: Hlomla Magopeni (218070349)
    Date: 21 June 2026 */
-
+@Embeddable
 public class Name implements ValueObject {
     private String firstName;
     private String middleName;
     private String lastName;
 
-    private Name(){
+    protected Name(){
 
     }
 
