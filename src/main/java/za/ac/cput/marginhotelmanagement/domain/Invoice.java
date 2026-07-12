@@ -10,6 +10,7 @@ import za.ac.cput.marginhotelmanagement.enums.InvoiceStatus;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "invoice")
 public class Invoice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,10 +19,13 @@ public class Invoice {
     private double totalAmount;
     private InvoiceStatus status;
     private LocalDate issueDate;
-
     @ManyToOne
-    @JoinColumn(name = "bookingId", referencedColumnName = "bookingId")
+    @JoinColumn(name = "booking_booking_id")
     private Booking booking;
+
+    public void setBooking(Booking booking) {
+        this.booking = booking;
+    }
 
 
     public Invoice(){
