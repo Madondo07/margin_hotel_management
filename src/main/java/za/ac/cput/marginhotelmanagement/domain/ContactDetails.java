@@ -1,20 +1,13 @@
 package za.ac.cput.marginhotelmanagement.domain;
+/* ContactDetails.java
+   ContactDetails value object
+   Author: Lithabile Lalela (221340963)
+   Date: 12 July 2026 */
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.Embeddable;
 
-@Entity
-@Table(name = "contact_details")
+@Embeddable
 public class ContactDetails implements ValueObject {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long contactDetailsId;
-
-    @Column(unique = true, nullable = false)
     private String email;
     private String mobile;
 
@@ -22,13 +15,8 @@ public class ContactDetails implements ValueObject {
     }
 
     public ContactDetails(Builder builder) {
-        this.contactDetailsId = builder.contactDetailsId;
         this.email = builder.email;
         this.mobile = builder.mobile;
-    }
-
-    public Long getContactDetailsId() {
-        return contactDetailsId;
     }
 
     public String getEmail() {
@@ -48,29 +36,20 @@ public class ContactDetails implements ValueObject {
     }
 
     public static class Builder {
-        private Long contactDetailsId;
         private String email;
         private String mobile;
 
         public Builder setEmail(String email) {
             this.email = email;
             return this;
-
         }
 
         public Builder setMobile(String mobile) {
             this.mobile = mobile;
             return this;
-
-        }
-
-        public Builder setContactDetailsId(Long contactDetailsId) {
-            this.contactDetailsId = contactDetailsId;
-            return this;
         }
 
         public Builder copy(ContactDetails contactDetails) {
-            this.contactDetailsId = contactDetails.contactDetailsId;
             this.email = contactDetails.email;
             this.mobile = contactDetails.mobile;
             return this;
@@ -80,5 +59,4 @@ public class ContactDetails implements ValueObject {
             return new ContactDetails(this);
         }
     }
-
 }
