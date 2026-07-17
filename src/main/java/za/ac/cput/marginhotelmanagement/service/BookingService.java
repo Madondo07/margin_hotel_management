@@ -35,6 +35,17 @@ public class BookingService implements IBookingService {
         }
         return null;
     }
+
+    @Override
+    public boolean delete(Booking booking) {
+        return false;
+    }
+
+    @Override
+    public List<Booking> findAll() {
+        return List.of();
+    }
+
     @Override
     public boolean delete(Long id) {
         if (bookingRepository.existsById(id)) {
