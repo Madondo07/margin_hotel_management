@@ -1,17 +1,13 @@
 package za.ac.cput.marginhotelmanagement.service;
-
+/*
+   Author: DM Madondo (230949703)
+   Date: 17 July 2026
+   */
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import za.ac.cput.marginhotelmanagement.domain.Booking;
-import za.ac.cput.marginhotelmanagement.domain.ContactDetails;
-import za.ac.cput.marginhotelmanagement.domain.Guest;
-import za.ac.cput.marginhotelmanagement.domain.Invoice;
-import za.ac.cput.marginhotelmanagement.domain.Name;
-import za.ac.cput.marginhotelmanagement.domain.Payment;
-import za.ac.cput.marginhotelmanagement.domain.Room;
-import za.ac.cput.marginhotelmanagement.domain.StayPeriod;
+import za.ac.cput.marginhotelmanagement.domain.*;
 import za.ac.cput.marginhotelmanagement.enums.BookingChannel;
 import za.ac.cput.marginhotelmanagement.enums.InvoiceStatus;
 import za.ac.cput.marginhotelmanagement.enums.PaymentStatus;
