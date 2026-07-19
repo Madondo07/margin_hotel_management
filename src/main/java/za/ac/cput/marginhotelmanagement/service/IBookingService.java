@@ -9,5 +9,7 @@ import za.ac.cput.marginhotelmanagement.domain.Booking;
 import java.util.List;
 
 public interface IBookingService extends IService<Booking, Long> {
+    boolean delete(Long id);
+
     List<Booking> getAll();
 }
