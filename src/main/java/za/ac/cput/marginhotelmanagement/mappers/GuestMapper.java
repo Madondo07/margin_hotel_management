@@ -11,9 +11,9 @@ package za.ac.cput.marginhotelmanagement.mappers;
 import za.ac.cput.marginhotelmanagement.domain.ContactDetails;
 import za.ac.cput.marginhotelmanagement.domain.Guest;
 import za.ac.cput.marginhotelmanagement.domain.Name;
-import za.ac.cput.marginhotelmanagement.dtos.CreateGuestRequest;
-import za.ac.cput.marginhotelmanagement.dtos.GuestDto;
-import za.ac.cput.marginhotelmanagement.dtos.UpdateGuestRequest;
+import za.ac.cput.marginhotelmanagement.domain.dtos.CreateGuestRequest;
+import za.ac.cput.marginhotelmanagement.domain.dtos.GuestDto;
+import za.ac.cput.marginhotelmanagement.domain.dtos.UpdateGuestRequest;
 
 public class GuestMapper {
 

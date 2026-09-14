@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import za.ac.cput.marginhotelmanagement.dtos.CreatePaymentRequest;
-import za.ac.cput.marginhotelmanagement.dtos.PaymentDto;
-import za.ac.cput.marginhotelmanagement.dtos.UpdatePaymentRequest;
+import za.ac.cput.marginhotelmanagement.domain.dtos.CreatePaymentRequest;
+import za.ac.cput.marginhotelmanagement.domain.dtos.PaymentDto;
+import za.ac.cput.marginhotelmanagement.domain.dtos.UpdatePaymentRequest;
 import za.ac.cput.marginhotelmanagement.enums.PaymentStatus;
 import za.ac.cput.marginhotelmanagement.service.PaymentService;
 
