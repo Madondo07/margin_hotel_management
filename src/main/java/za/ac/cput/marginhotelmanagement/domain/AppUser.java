@@ -6,6 +6,7 @@ package za.ac.cput.marginhotelmanagement.domain;
    */
 
 import jakarta.persistence.*;
+import za.ac.cput.marginhotelmanagement.enums.UserRole;
 
 import javax.management.relation.Role;
 
@@ -23,7 +24,7 @@ public class AppUser {
     private String password; //BCrypt hashed password
 
     @Enumerated(EnumType.STRING)
-    private Role role;
+    private UserRole role;
 
     //Optional link to an existing guest.
     @OneToOne
@@ -53,7 +54,7 @@ public class AppUser {
         return password;
     }
 
-    public Role getRole() {
+    public UserRole getRole() {
         return role;
     }
 
@@ -76,7 +77,7 @@ public class AppUser {
         private Long userId;
         private String email;
         private String password;
-        private Role role;
+        private UserRole role;
         private Guest guest;
 
         public Builder setUserId(Long userId) {
@@ -94,7 +95,7 @@ public class AppUser {
             return this;
         }
 
-        public Builder setRole(Role role) {
+        public Builder setRole(UserRole role) {
             this.role = role;
             return this;
         }

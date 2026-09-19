@@ -98,7 +98,7 @@ public class GuestService implements IGuestService {
 
     @Override
     public Guest findByEmail(String email) {
-        return guestRepository.findByContactDetails_Email(email);
+        return (Guest) guestRepository.findByContactDetails_Email(email);
     }
 
     /* ==== DTO based methods, this is what GuestController actually calls ==== */

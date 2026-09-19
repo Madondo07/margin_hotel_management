@@ -6,13 +6,14 @@ package za.ac.cput.marginhotelmanagement.factory;
 
 import za.ac.cput.marginhotelmanagement.domain.AppUser;
 import za.ac.cput.marginhotelmanagement.domain.Guest;
+import za.ac.cput.marginhotelmanagement.enums.UserRole;
 import za.ac.cput.marginhotelmanagement.util.Helper;
 
 import javax.management.relation.Role;
 
 public class AppUserFactory {
 
-    public static AppUser createAppUser(String email, String password, Role role, Guest guest) {
+    public static AppUser createAppUser(String email, String password, UserRole role, Guest guest) {
         if (Helper.isInvalidEmail(email) || Helper.isNullOrEmpty(password) || Helper.isNullOrEmpty(role)) {
             return null;
         }
