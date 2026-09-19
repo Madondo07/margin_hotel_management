@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.AuthenticationException;
 import za.ac.cput.marginhotelmanagement.domain.dtos.*;
 import za.ac.cput.marginhotelmanagement.service.AuthService;
 import za.ac.cput.marginhotelmanagement.service.JwtService;
@@ -42,7 +43,7 @@ public class AuthController {
         try {
             AuthUserResponse response = authService.loginUser(request);
             return ResponseEntity.ok(response);
-        } catch (IllegalArgumentException e) {
+        } catch (AuthenticationException | IllegalArgumentException e) {
             return new ResponseEntity<>("Invalid email or password", HttpStatus.UNAUTHORIZED);
         }
     }
