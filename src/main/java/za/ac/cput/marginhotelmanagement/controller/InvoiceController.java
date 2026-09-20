@@ -19,6 +19,7 @@ import za.ac.cput.marginhotelmanagement.service.InvoiceService;
 import java.time.LocalDate;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/invoice")
 public class InvoiceController {
