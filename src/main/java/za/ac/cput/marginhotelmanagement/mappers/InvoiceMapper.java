@@ -9,8 +9,8 @@ package za.ac.cput.marginhotelmanagement.mappers;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import za.ac.cput.marginhotelmanagement.domain.Invoice;
-import za.ac.cput.marginhotelmanagement.dtos.CreateInvoiceRequest;
-import za.ac.cput.marginhotelmanagement.dtos.InvoiceDto;
+import za.ac.cput.marginhotelmanagement.domain.dtos.CreateInvoiceRequest;
+import za.ac.cput.marginhotelmanagement.domain.dtos.InvoiceDto;
 
 @Mapper(componentModel = "spring")
 public interface InvoiceMapper {

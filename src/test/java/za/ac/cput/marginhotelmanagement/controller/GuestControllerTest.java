@@ -20,9 +20,9 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import za.ac.cput.marginhotelmanagement.dtos.CreateGuestRequest;
-import za.ac.cput.marginhotelmanagement.dtos.GuestDto;
-import za.ac.cput.marginhotelmanagement.dtos.UpdateGuestRequest;
+import za.ac.cput.marginhotelmanagement.domain.dtos.CreateGuestRequest;
+import za.ac.cput.marginhotelmanagement.domain.dtos.GuestDto;
+import za.ac.cput.marginhotelmanagement.domain.dtos.UpdateGuestRequest;
 import za.ac.cput.marginhotelmanagement.repository.GuestRepository;
 
 import static org.junit.jupiter.api.Assertions.*;

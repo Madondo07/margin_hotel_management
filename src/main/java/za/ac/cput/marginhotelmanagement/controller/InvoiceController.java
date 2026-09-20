@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import za.ac.cput.marginhotelmanagement.dtos.CreateInvoiceRequest;
-import za.ac.cput.marginhotelmanagement.dtos.InvoiceDto;
-import za.ac.cput.marginhotelmanagement.dtos.UpdateInvoiceRequest;
+import za.ac.cput.marginhotelmanagement.domain.dtos.CreateInvoiceRequest;
+import za.ac.cput.marginhotelmanagement.domain.dtos.InvoiceDto;
+import za.ac.cput.marginhotelmanagement.domain.dtos.UpdateInvoiceRequest;
 import za.ac.cput.marginhotelmanagement.enums.InvoiceStatus;
 import za.ac.cput.marginhotelmanagement.service.InvoiceService;
 

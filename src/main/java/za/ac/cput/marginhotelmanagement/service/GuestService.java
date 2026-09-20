@@ -12,9 +12,9 @@ package za.ac.cput.marginhotelmanagement.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.marginhotelmanagement.domain.Guest;
-import za.ac.cput.marginhotelmanagement.dtos.CreateGuestRequest;
-import za.ac.cput.marginhotelmanagement.dtos.GuestDto;
-import za.ac.cput.marginhotelmanagement.dtos.UpdateGuestRequest;
+import za.ac.cput.marginhotelmanagement.domain.dtos.CreateGuestRequest;
+import za.ac.cput.marginhotelmanagement.domain.dtos.GuestDto;
+import za.ac.cput.marginhotelmanagement.domain.dtos.UpdateGuestRequest;
 import za.ac.cput.marginhotelmanagement.mappers.GuestMapper;
 import za.ac.cput.marginhotelmanagement.repository.GuestRepository;
 import za.ac.cput.marginhotelmanagement.util.Helper;
@@ -98,7 +98,7 @@ public class GuestService implements IGuestService {
 
     @Override
     public Guest findByEmail(String email) {
-        return guestRepository.findByContactDetails_Email(email);
+        return (Guest) guestRepository.findByContactDetails_Email(email);
     }
 
     /* ==== DTO based methods, this is what GuestController actually calls ==== */

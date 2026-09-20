@@ -179,11 +179,3 @@ Base path: `/staff`
 
 - `GET /staff/receptionist/getall`
   - Returns all receptionists.
-
-## Notes for Claude / AI understanding
-
-- These are Spring Boot REST controllers.
-- Each controller is mapped with `@RequestMapping` on a resource path.
-- Most endpoints use standard CRUD-style actions plus a few query endpoints.
-- The main request/response objects are domain classes such as `Booking`, `Invoice`, `Guest` , `Payment`, `Manager`, and `Receptionist`.
-- One endpoint path looks inconsistent: `/staff/requeptionist/read/{id}` should likely be `/staff/receptionist/read/{id}`.
