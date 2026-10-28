@@ -60,5 +60,5 @@ Run the test suite from the repository root:
 - `src/test/java` — automated tests
 
 ## UML Diagram
-![Margin Hotel UML Diagram](./Margin_Hotel_UML_2.jpeg)
+![Margin Hotel UML Diagram](./Margin-Hotel-UML-2.jpeg)
 
